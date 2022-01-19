@@ -34,6 +34,7 @@ namespace SignalR_ChartProject.API
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
 
+            services.AddScoped<CovidService>();
             services.AddControllers();
             services.AddSignalR();
             services.AddSwaggerGen(c =>
